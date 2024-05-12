@@ -1,0 +1,412 @@
+@font-face {
+  font-family: "Ponter-Bold";
+  src: url("../font/Ponter-Bold.ttf.woff") format("woff"),
+      url("../font/Ponter-Bold.ttf.svg#Ponter-Bold") format("svg"),
+      url("../font/Ponter-Bold.ttf.eot"),
+      url("../font/Ponter-Bold.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: lighter;
+  font-style: normal;
+}
+  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  
+html:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Ponter-Bold";
+}
+
+ /* ~~~~~ NAVIGATION BAR ~~~~~~ */
+
+ nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  padding: 10px 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav li a {
+  text-decoration: none;
+  color: #000;
+}
+
+nav li a:hover {
+  text-decoration: underline;
+}
+
+.maki-bg {
+  background-image: url("../images/makiCoverDesktop.jpg");
+  background-size: cover;
+  background-position: top;
+}
+
+/* ~~~~~ COUNTDOWN BANNER SECTION ~~~~~~ */
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  overflow-y: scroll;
+  overflow: hidden;
+}
+
+.banner {
+  min-height: 80vh;
+  display: flex;
+  margin-inline: auto;
+  margin-top: 10rem;
+  place-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.banner:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+}
+
+.banner h2 {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0px 20px 0px;
+  font-size: 2.5rem;
+}
+
+.countdown-container {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.timer-container {
+  display: flex;
+  gap: 3rem;
+}
+
+.timer-container-values {
+  width: 12rem;
+  text-align: center;
+  justify-content: center;
+  font-size: 150px;
+  padding: 15x 10px;
+  color: rgb(0, 0, 0);
+}
+
+.small-text {
+  font-size: 40px;
+}
+
+/* ~~~~~ POINTER ~~~~~~ */
+  
+.scroll-button {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+.scroll-button a {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 0 10px rgba(40, 35, 105, 0.5);
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+}
+
+.scroll-button a:hover {
+  transform: translateY(20px);
+}
+
+.scroll-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ~~~~~ PRODUCT PREVIEW CAROUSEL */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 900px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides img {
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.Product-Preview {
+  display: flex;
+  flex-direction: row;
+  max-width: 1000px;
+  min-height: 50vh;
+  margin-inline: auto;
+}
+
+.PP-descript {
+  margin: 50px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.PP-descript p {
+  margin: 10px 0px 0px 0px;
+  text-align: justify;
+  max-width: 30rem;
+}
+
+/* ~~~~~ PRODUCT CAROUSEL SECTION ~~~~~ */
+
+.products {
+  background-image: url(../images/blurry-gradient-haikei.svg);
+  background-size: cover;
+  background-position: top;
+  margin-inline: auto;
+}
+
+.product-carousel {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.mySlides1 img {
+  max-width: 800px;
+  margin: 20px;
+}
+
+/* Slideshow container */
+.slideshow-container2 {
+  max-width: 2000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev1, .next2 {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next2 {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev1:hover, .next2:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+/* ~~~~~ CONTACTS SECTION ~~~~~ */
+
+.yuji-bg {
+  background-image: url(../images/yujiCoverDesktop.jpg);
+  background-size: cover;
+}
+
+.contact {
+  position: relative;
+  min-height: 100vh;
+  max-width: 120vh;
+  margin-inline: auto;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact .content {
+  max-width: 800px;
+  text-align: center;
+}
+
+.contact .content h2 {
+  font-size: 36px;
+  font-weight: 500;
+  color: gray;
+}
+
+.contact .content p {
+  font-weight: 30;
+  color: gray;
+}
+
+.form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.form-container .contactInfo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container .contactInfo .box {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+
+.form-container .contactInfo .box .icon {
+  min-width: 60px;
+  height: 60px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 22px;
+}
+
+.form-container .contactInfo .box .icon .text {
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  flex-direction: column;
+  font-weight: 300;
+}
+
+.form-container .contactInfo .box .icon .text h3 {
+  font-weight: 500;
+  color: #00bcd4;
+}
+.contactForm {
+  width: 40%;
+  padding: 40px;
+  background: #fff;
+}
+
+.contactForm h2 {
+  font-size: 30px;
+  color: #333;
+  font-weight: 500;
+}
+
+.contactForm .inputBox {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contactForm .inputBox input, .contactForm .inputBox textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 26px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid#333;
+  outline: none;
+  resize: none;
+}
+
+.contactForm .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 26px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span, .contactForm .inputBox input:valid ~ span, .contactForm .inputBox textarea:focus ~ span, .contactForm .inputBox textArea:valid ~ span {
+  color: #e91e63;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+.contactForm .inputBox input[type="submit"]{
+  width: 100px;
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+
+@media (max-width:991px){
+  .contact {
+    padding: 50px;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .container .contactInfo {
+    margin-bottom: 40px;
+  }
+  .container .contactInfo, .contactForm {
+    width: 100%;
+  }
+}
